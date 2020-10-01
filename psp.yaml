@@ -1,0 +1,26 @@
+piVersion: policy/v1beta1
+kind: PodSecurityPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"policy/v1beta1","kind":"PodSecurityPolicy","metadata":{"annotations":{},"name":"atos-di-policy"},"spec":{"fsGroup":{"rule":"RunAsAny"},"privileged":false,"runAsUser":{"rule":"RunAsAny"},"seLinux":{"rule":"RunAsAny"},"supplementalGroups":{"rule":"RunAsAny"},"volumes":["*"]}}
+  creationTimestamp: "2020-07-13T15:43:52Z"
+  name: atos-di-policy
+  resourceVersion: "30772946"
+  selfLink: /apis/policy/v1beta1/podsecuritypolicies/atos-di-policy
+  uid: a6ef7953-c51f-11ea-9e8d-42010a9c007e
+spec:
+  privileged: true
+  allowedCapabilities:
+  - 'NET_ADMIN'
+  allowPrivilegeEscalation: true
+  fsGroup:
+    rule: RunAsAny
+  runAsUser:
+    rule: RunAsAny
+  seLinux:
+    rule: RunAsAny
+  supplementalGroups:
+    rule: RunAsAny
+  volumes:
+  - '*'
